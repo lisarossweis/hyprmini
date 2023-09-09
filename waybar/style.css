@@ -1,0 +1,261 @@
+* {
+  border: none;
+  border-radius: 0;
+  font-family: JetBrainsMono Nerd Font, FontAwesome;
+  font-weight: normal;
+  font-size: 14px;
+}
+
+window#waybar {
+  background-color: #d3c6aa;
+  color: #2d353b;
+  transition-property: background-color;
+  transition-duration: 0.5s;
+  transition-duration: .5s;
+
+  border-bottom: 4px solid #7d6a40;
+}
+
+tooltip {
+  background: #3d484d;
+  border-radius: 5px;
+  border-width: 2px;
+  border-style: solid;
+  border-color: #4f585e;
+}
+
+/* GLOBAL style */
+#workspaces,
+#custom-wofi,
+#custom-powermenu,
+#custom-filemanager,
+#custom-browser,
+#custom-wallpaper,
+#memory,
+#cpu,
+#disk,
+#custom-weather,
+#network,
+#battery,
+#backlight,
+#pulseaudio,
+#clock,
+#tray {
+  background-color: #2d353b;
+  color: #d3c6aa;
+
+  padding: 0px 10px;
+  margin: 3px 0px 6px;
+  border-bottom: 3px solid #161a1d;
+}
+
+/* BEGIN Tray module */
+#tray {
+  border-radius: 10px;
+  margin-right: 5px;
+}
+/* END Tray module */
+
+/* BEGIN Workspace module */
+#workspaces {
+  padding: 0px;
+  border-radius: 10px;
+}
+
+#workspaces button {
+  padding: 5px 10px;
+}
+
+#workspaces button:first-child {
+  border-radius: 10px 0px 0px 10px;
+}
+
+#workspaces button:last-child {
+  margin-right: 0px;
+  border-radius: 0px 10px 10px 0px;
+}
+
+#workspaces button.active {
+  background-color: #7fbbb3;
+  color: #2d353b;
+  margin-bottom: -3px;
+  border-bottom: 3px solid #366660;
+  border-radius: 10px;
+}
+/* END Workspace module */
+
+/* BEGIN Network module */
+#network {
+  border-radius: 10px;
+}
+
+#network.disabled {
+  color: #f85552;
+}
+
+#network.disconnected {
+  color: #e67e80;
+}
+
+#network.linked {
+  color: #d699b6;
+}
+
+#network.ethernet {
+  color: #a7c080;
+}
+
+#network.wifi {
+  color: #83c092;
+}
+/* END Network module */
+
+/* BEGIN Battery module */
+#battery.full,
+#battery.good {
+  color: #83c092;
+}
+
+#battery.warning {
+  color: #dbbc7f;
+}
+
+#battery.critical {
+  color: #e67e80;
+}
+/* END Battery module */
+
+#backlight {}
+
+/* BEGIN PulseAudio module */
+#pulseaudio {}
+
+#pulseaudio.microphone {}
+/* END PulseAudio module */
+
+/* BEGIN Memory and CPU module */
+#memory {}
+
+#cpu {}
+
+#memory,
+#memory.low,
+#cpu,
+#cpu.low {
+  color: #83c092;
+}
+
+#memory.mild,
+#cpu.mild {
+  color: #d3c6aa;
+}
+
+#memory.medium,
+#cpu.medium {
+  color: #dbbc7f;
+}
+
+#memory.high,
+#cpu.high {
+  color: #e69875;
+}
+
+#memory.heavy,
+#cpu.heavy {
+  color: #e67e80;
+}
+/* END Memory and CPU module */
+
+/*
+ * FIRST module on a specific section
+ * has rounded corner on
+ * top right and bottom right
+ */
+
+#custom-filemanager,
+#network,
+#memory {
+  border-radius: 10px 0px 0px 10px;
+}
+
+/*************************************/
+
+/*
+ * LAST module on a specific section
+ * has rounded corner on
+ * top right and bottom right
+ */
+
+#custom-browser,
+#clock,
+#disk {
+  border-radius: 0px 10px 10px 0px;
+}
+
+/*************************************/
+
+/*
+ * FIRST module on LEFT side
+ */
+
+#custom-filemanager,
+#memory {
+  margin-left: 5px;
+}
+
+/*************************************/
+
+/*
+ * LAST module on RIGHT side
+ */
+
+#clock {
+  margin-right: 5px;
+}
+
+/*************************************/
+
+/*
+ * Standalone module on a section
+ * has rounded corner on both side
+ */
+
+#custom-wofi,
+#custom-powermenu {
+  border-radius: 10px;
+  padding-left: 11px;
+  padding-right: 10px;
+}
+
+#custom-wofi {
+  margin-left: 5px;
+  background-color: #a7c080;
+  color: #2d353b;
+  border-bottom-color: #556a35;
+}
+
+#custom-powermenu {
+  margin-right: 5px;
+  background-color: #e67e80;
+  color: #2d353b;
+  border-bottom-color: #556a35;
+}
+
+#custom-weather {
+  border-radius: 10px;
+  margin-left: 5px;
+}
+
+/*************************************/
+
+#custom-filemanager {
+  color: #dbbc7f;
+}
+
+#custom-browser {
+  color: #7fbbb3;
+}
+
+#custom-wallpaper {
+  color: #3a94c5;
+}
